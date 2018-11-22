@@ -41,7 +41,7 @@ source files, and the red dots represent targets (most of them are also
 files generated in the pipelines). Notice that in this figure, target
 “clean” is not shown.
 
-<img src="./images_keep/makefile.png" alt="Pipelines" width="1500"/>
+<img src="./images_keep/makefile.png" alt="Pipelines" width="1800"/>
 
 ### Data downloaded
 
@@ -61,10 +61,11 @@ perform the following data analysis:
 -   `histogram`: which is implemented in the orginal project
     [“make-activity”](https://github.com/STAT545-UBC/make-activity). It
     shows a histogram of frequencies of letters in a document called
-    “words.txt”.
+    “words.txt”. You can run `make histogram` to run this target alone.
 -   `sort_country`: it obtains countries in `gapminder` dataframe that
     also appears in “words.txt”, and shows maximum population in
-    different formats.
+    different formats. You can run `make sort_country` to run this
+    target alone.
 
 ### Reports
 
@@ -79,8 +80,9 @@ For the above two targets, two HTML files are generated as reports.
 
 ### Default targets
 
-Two default targets are modified: - `all`: which runs `histogram` and
-`sort_country` separately. - `clean`: which deletes generated folders
-and files. Thanks to an improved file structure (based on folders), we
-can simply remove folders [“data”](./data/), [“images”](./images/), and
-[“doc”](./doc)
+Two default targets are modified:
+
+-   `all`: which runs `histogram` and `sort_country` separately.
+-   `clean`: which deletes generated folders and files. Thanks to an
+    improved file structure (based on folders), we can simply remove
+    folders [“data”](./data/), [“images”](./images/), and [“doc”](./doc)
