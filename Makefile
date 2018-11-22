@@ -4,7 +4,7 @@ all: histogram sort_country
 # clean all
 clean:
 	rm -rf ./data/
-	rm -r ./images/*.png
+	rm -rf ./images/
 	rm -rf ./doc/
 
 # task 1: generate histogram for words.txt
@@ -26,6 +26,7 @@ sort_country: ./doc/sort_country.html
 	
 # plot histogram
 ./images/histogram.png: ./data/histogram.tsv
+	mkdir -p ./images/
 	Rscript -e 'library(ggplot2); qplot(Length, Freq, data=read.delim("$<")); ggsave("$@")'
 	rm Rplots.pdf
 
@@ -45,6 +46,7 @@ sort_country: ./doc/sort_country.html
 	
 # plot reorder results using fct_reorder()
 ./images/reorder_by_fct.png: ./src/r/reorder_by_fct.R ./data/gapminder_by_words.rds
+	mkdir -p ./images/
 	Rscript $<
 	rm -f Rplots.pdf
 	
