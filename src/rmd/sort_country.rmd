@@ -15,19 +15,11 @@ suppressPackageStartupMessages(library(leaflet))
 
 The following code is modified based on [my STAT 545A Homework 05](https://github.com/STAT545-UBC-students/hw05-zjbthomas). It is separated into two R files.
 
-"gapminder_by_words.R" reads `gapminder` database and "words.txt", and generates a new dataframe called 'gapminder_by_words'. It can be used in other analysis pipelines.
+- "gapminder_by_words.R" reads `gapminder` database and "words.txt", and generates a new dataframe called 'gapminder_by_words'. It can be used in other analysis pipelines.
 
-```{r, echo = FALSE}
-knitr::read_chunk("../r/gapminder_by_words.r")
-```
-
-"reorder_by_fct.R" generates the following image using `fct_reorder()`.
+- "reorder_by_fct.R" generates the following image using `fct_reorder()`.
 
 ![](../../images/reorder_by_fct.png)
-
-```{r, echo = FALSE}
-knitr::read_chunk("../r/reorder_by_fct.r")
-```
 
 # Show maximum population on map using `leaflet()`
 
